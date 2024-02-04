@@ -1,2 +1,3 @@
-
-https://github.com/nikhilvenkatkumsetty/TrashBox
+Pour faire le fine tuning du modèle d'IA, nous avons utilisé deux datasets: 
+- Le premier a été uniquement utilisé lors des tests afin d'essayer d'obtenir des modèles avec une meilleure généralisation et de meilleurs scores. On a pu trouver le dataset à ce lien : https://github.com/nikhilvenkatkumsetty/TrashBox
+- Le deuxième a été utilisé pour les tests et le fine-tuning de notre modèle. Adresse du dataset : https://github.com/Morris88826/waste_item_classification/tree/master/garbage-classification/data
