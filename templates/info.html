@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='Images/logoweb.png') }}" />
+  <meta http-equiv="refresh" content="10">
+  
+  <title>Recycle Rush</title>
+</head>
+
+<body>
+  <section>
+    <nav>
+      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='Images/logo.png') }}" alt="Logo"></a>
+      
+        <ul id="nav-list">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('recy') }}" style="box-shadow: 1px 1px 20px #c9d3ff; color: white; background-color: #c9d3ff;">Recycling</a></li>
+          <li><a href="{{ url_for('more') }}">Learn More</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+        </ul>
+        
+      <a href="{{ url_for('scanner') }}" class="try-now">SCAN</a>
+      </nav>
+  </section>
+
+  <section>
+    <div class="presentation" style="background-color: rgb(99, 99, 99, 0.2); margin-left:10%; margin-right:10%; padding-top: 60px; border-radius: 15px;">
+      <h1 style="font-size:60px; margin-top:10px; margin-bottom:10px; box-shadow: 10px ">Types of waste bins</h1>
+      <br><br><br>
+      <h1>
+        Compostable Waste
+      </h1>
+      <h3 style="text-align: justify;">
+        Compostable waste includes organic materials like kitchen scraps and yard waste.
+        These items break down into nutrient-rich compost, contributing to soil health and reducing landfill waste.
+        Composting is an eco-friendly way to recycle biodegradable materials.
+      </h3>
+      <br><br>
+
+      <h1>
+        Recyclable Trash
+      </h1>
+      <h3 style="text-align: justify;">
+        Recyclable waste consists of materials like paper, cardboard, glass, plastic, 
+        and metal that can be reprocessed to create new products. Recycling reduces resource 
+        consumption and environmental impact, promoting a circular economy.
+      </h3>
+      <br><br>
+
+      <h1>
+        Non-Recyclable Trash
+      </h1>
+      <h3 style="text-align: justify;">
+        Non-recyclable trash encompasses materials that cannot be processed or recycled efficiently.
+        Proper disposal of non-recyclable trash is crucial to prevent environmental pollution and health hazards.
+      </h3>
+      <br><br>
+
+      <h1>
+        Electronic Waste (E-Waste)
+      </h1>
+      <h3 style="text-align: justify;">
+        E-waste comprises discarded electronic devices like computers, smartphones, and appliances.
+        Responsible recycling of e-waste helps recover valuable metals while preventing
+        environmental pollution and health risks.
+      </h3>
+      <br><br>
+
+      <h1>
+        Harzadous Waste
+      </h1>
+      <h3 style="text-align: justify;">
+        Hazardous waste includes materials that pose a threat to human health or the environment 
+        due to their toxic, flammable, corrosive, or reactive nature. Proper handling, treatment,
+        and disposal of hazardous waste are essential to prevent contamination and protect ecosystems.
+      </h3>
+      <br><br>
+
+      
+      <br><br>
+
+      
+      
+
+    </div>
+    <img id="fixedImage0" src="{{ url_for('static', filename='Images/earth.png') }}" alt="Earth Image">
+    <img id="fixedImage1" src="{{ url_for('static', filename='Images/compost.png') }}" alt="Compostable Waste Image">
+    <img id="fixedImage2" src="{{ url_for('static', filename='Images/recyclable.png') }}" alt="Recyclable Image">
+    <img id="fixedImage3" src="{{ url_for('static', filename='Images/trash.png') }}" alt="Trash Image">
+    <img id="fixedImage4" src="{{ url_for('static', filename='Images/ewaste.png') }}" alt="E-Waste Image">
+    <img id="fixedImage5" src="{{ url_for('static', filename='Images/hazard.png') }}" alt="Hazardous Image">
+  </section>
+
+  
+
+  <section id="footer">
+    <div class="container">
+      <ul class="copyright">
+        <li>Recycling is more than a task—it's our duty to the Earth. By recycling, we reduce waste, save resources, and minimize pollution. Let's commit to a greener future, one recycled item at a time. Together, we can make a lasting impact.</a></li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

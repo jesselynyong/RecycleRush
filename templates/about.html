@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" >
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='Images/logoweb.png') }}" />
+  
+  <title>Recycle Rush</title>
+</head>
+
+<body>
+  <section>
+    <nav>
+      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='Images/logo.png') }}" alt="Logo"></a>
+      
+        <ul id="nav-list">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('recy') }}">Recycling</a></li>
+          <li><a href="{{ url_for('more') }}">Learn More</a></li>
+          <li><a href="{{ url_for('about') }}" style="box-shadow: 1px 1px 20px #c9d3ff; color: white; background-color: #c9d3ff;">About Us</a></li>
+        </ul>
+        
+      <a href="{{ url_for('scanner') }}" class="try-now">SCAN</a>
+      </nav>
+  </section>
+
+  <section>
+    <div class="abouttitle">
+        <h1>ABOUT US</h1>
+        <!-- <h2>
+            <div class="abouttext">Behind Recycle Rush</div>
+            <br>
+            <i><b>Recycle Rush</b></i> has been developed by a team of four dedicated students with the goal of educationg kids as well as adults
+            about the importance of recycling and the impact it has on the environment.  We have made a fun and interactive way for people to
+            discard their waste and learn about the importance of disposing of waste properly.
+        </h2> -->
+        <br>
+    </div>
+
+    <section class="team-section">
+        <div class="not-container">
+            <div class="flex-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p class="title">Thomas</p>
+                            <img class="profile" src="{{ url_for('static', filename='Images/Thomas.jpeg') }}" alt="Thomas Houlachi">
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="https://www.linkedin.com/in/thomas-houlachi-91b940275/" style="text-decoration: none; color:white">
+                                <p class="LinkedIn">Thomas Houlachi</p>
+                                <h5 style="text-align: center; padding: 50px; font-size: 20px">
+                                    Hi, I'm Thomas!
+                                    Beginner hacker.
+                                    Student at Polytechnique.
+                                    <br><br>
+                                    Entrepreneur.
+                                </h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p class="title">William</p>
+                            <img class="profile" src="{{ url_for('static', filename='Images/William.jpeg') }}" alt="William Hu">
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="https://www.linkedin.com/in/hu-william/" style="text-decoration: none; color:white">
+                                <p class="LinkedIn">William<br>Hu</p>
+                                <h5 style="text-align: center; padding: 50px; font-size: 20px">
+                                    Hi, I'm William!
+                                    Beginner hacker.
+                                    Student at ÉTS.
+                                    <br><br>
+                                    AE92 owner.
+                                </h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p class="title">Antoine</p>
+                            <img class="profile" src="{{ url_for('static', filename='Images/Antoine.jpeg') }}" alt="Antoine Leblanc">
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="https://www.linkedin.com/in/antoine-leblanc-a6307b235/" style="text-decoration: none; color:white">
+                                <p class="LinkedIn">Antoine Leblanc</p>
+                                <h5 style="text-align: center; padding: 50px; font-size: 20px">
+                                    Hi, I'm Antoine!
+                                    Beginner hacker.
+                                    Student at Polytechnique.
+                                    <br><br>
+                                    French.
+                                </h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p class="title">Jesselyn</p>
+                            <img class="profile" src="{{ url_for('static', filename='Images/Jesselyn.jpeg') }}" alt="Jesselyn Yong">
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="https://www.linkedin.com/in/jesselyn-yong/" style="text-decoration: none; color:white">
+                                <p class="LinkedIn">Jesselyn Yong</p>
+                                <h5 style="text-align: center; padding: 50px; font-size: 20px">
+                                    Hi, I'm Jesselyn!
+                                    Beginner hacker.
+                                    Student at ÉTS.
+                                    <br><br>
+                                    Stressed out 24/7.
+                                </h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}" >
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='Images/logoweb.png') }}" />
+
+
+  <meta http-equiv="refresh" content="10">
+  
+  <title>Recycle Rush</title>
+</head>
+
+<body>
+  <section>
+    <nav>
+      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='Images/logo.png') }}" alt="Logo"></a>
+      
+        <ul id="nav-list">
+          <li><a href="{{ url_for('home') }}" style="box-shadow: 1px 1px 20px #c9d3ff; color: white; background-color: #c9d3ff;">Home</a></li>
+          <li><a href="{{ url_for('recy') }}">Recycling</a></li>
+          <li><a href="{{ url_for('more') }}">Learn More</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+        </ul>
+        </nav>
+        <div class="image-container"></div>
+    </section>
+
+  <section>
+    <div class="presentation">
+      <h1 style="font-size:80px; margin-top:10px; margin-bottom:10px; box-shadow: 10px;">Recycle Rush</h1>
+      <h2 style="font-size:30px; margin-top:10px; margin-bottom:10px;">Learn with Technology</h2>
+      <h3 style="text-align: center;">
+        Our mission is to make recycling fun and accessible for everyone.
+        In Quebec, 18% of the materials sent to sorting centers are rejected due to sorting errors by citizens.
+      </h3>
+      <br><br>
+      <div>
+        <a href="{{ url_for('scanner') }}" class="scanbt">SCAN</a>
+        <h2 style="font-size: 30px;">Educative Game<br>Teaching kids how to recycle through gamification.</h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="footer">
+    <div class="container">
+      <ul class="copyright">
+        <li>Recycling is more than a task—it's our duty to the Earth. By recycling, we reduce waste, save resources, and minimize pollution. Let's commit to a greener future, one recycled item at a time. Together, we can make a lasting impact.</a></li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

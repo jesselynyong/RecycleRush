@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='Images/logoweb.png') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-bd5fPY0FpeNd/BjNYAA3C1nZtRUIGkBRpZQHlG9yD6ysI2tSbBRIkOnpL7IaOhts2vmKl+8eX7FZrIuAlFoAeg==" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $("#startButton").click(function() {
+            $.ajax({
+                url: "/start", // Assuming you have a start endpoint
+                type: "POST",
+                success: function(response) {
+                    console.log("Timer started");
+                },
+                error: function(error) {
+                    console.log("Error starting timer");
+                }
+            });
+        });
+    });
+  </script>
+  
+  <title>Recycle Rush</title>
+</head>
+
+<body>
+  <section>
+    <nav>
+      <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='Images/logo.png') }}" alt="Logo"></a>
+      
+        <ul id="nav-list">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('recy') }}">Recycling</a></li>  
+          <li><a href="more.html">Learn More</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="{{ url_for('static', filename='Images/image-container') }}"></div>
+  </section>
+
+    <div class = "scanf">
+      <form class = "classform" method="post">
+        <video id="video" width="640" height="480" autoplay></video>
+        <br>
+        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+        <br>
+        <input type="hidden" name="image" id="image" value="">
+        <button class = "scannerbtn" type="button" onclick=""><img src="{{ url_for('static', filename='Images/camera.png') }}" style="width: 70px; height: 40px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" alt="Camera Icon"></button>
+        
+      </form>
+      <br>
+      
+    <script>
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                var video = document.getElementById('video');
+                video.srcObject = stream;
+            })
+            .catch(function (err) {
+                console.error('An error occurred: ' + err);
+            });
+
+        function captureImageAndPredict() {
+            var video = document.getElementById('video');
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            var dataURL = canvas.toDataURL('image/jpeg');
+            document.getElementById('image').value = dataURL;
+
+            // Submit the form after capturing the image
+            document.forms[0].submit();
+
+        }
+    </script>
+
+        <form action="{{ url_for('control_led') }}" method="post">
+          <button type="submit" name="led" value="1">Start</button>
+        </form>
+        {% if responseTime %}
+          <p>Response Time: {{ responseTime }} ms</p>
+        {% else %}
+          <p>Response Time not available</p>
+        {% endif %}
+
+      <p>Response Time: {{ responseTime }} ms</p>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        
+    </div>
+    <div style="position: absolute; background-color: rgba(99, 99, 99, 0.2); right: 3%; width: 350px; top: 40%; transform: translateY(-50%); padding-top: 0px; border-radius: 15px;">
+      <h1 style="font-size: 15px; margin-top: 20px; margin-bottom: 10px; box-shadow: 10px; padding: 10px;">
+        <br><br>Material: <br><br>{{ material here }} <br><br><br><br><br>{% if responseTime %} Response Time:<br><br>{{ responseTime }}  {% else %}  Response Time not available   {% endif %}<br><br>Time:<br><br>{{ responseTime }}<br><br><br><br></h1>
+    </div>
+
+
+  <section id="footer">
+    <div class="container">
+      <ul class="copyright">
+        <li>With a global network of customers, partners, employees, and thought leaders, SAP helps the world run better and improves people's lives. SAP helps companies and organisations of all sizes and industries run their businesses profitably, adapt continuously, and grow sustainably.</a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+</body>
+</html>

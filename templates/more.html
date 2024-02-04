@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" >
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='Images/logoweb.png') }}" />
+  <meta http-equiv="refresh" content="10">
+  
+  <title>Recycle Rush</title>
+  <script>
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            var video = document.getElementById('video');
+            video.srcObject = stream;
+        })
+        .catch(function(err) {
+            console.error('An error occurred: ' + err);
+        });
+</script>
+</head>
+
+<body>
+  <section>
+    <nav>
+      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='Images/logo.png') }}" alt="Logo"></a>
+      
+        <ul id="nav-list">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('recy') }}">Recycling</a></li>
+          <li><a href="{{ url_for('more') }}" style="box-shadow: 1px 1px 20px #c9d3ff; color: white; background-color: #c9d3ff;">Learn More</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+        </ul>
+        
+          <a href="{{ url_for('scanner') }}" class="try-now">SCAN</a>
+        </nav>
+      </section>
+
+      <section>
+        <div class="presentation" style="background-color: rgb(99, 99, 99, 0.2); margin-left:10%; margin-right:10%; padding-top: 60px; border-radius: 15px;">
+          <h1 style="font-size:60px; margin-top:10px; margin-bottom:10px; box-shadow: 10px ">Where does your waste go??</h1>
+          <br><br><br>
+          <h1>
+            Compostable Waste
+          </h1>
+          <h3 style="text-align: justify;">
+            Compost, derived from organic waste through decomposition, serves as a natural fertilizer and soil enhancer.
+            It improves soil structure, retains water, and promotes plant growth, offering a sustainable way to recycle organic waste.
+          </h3>
+          <br><br>
+    
+          <h1>
+            Recyclable Trash
+          </h1>
+          <h3 style="text-align: justify;">
+            Recyclable materials undergo a process where they are transformed into new products with various applications.
+            For instance, recycled paper can be used to produce new paper goods, recycled glass finds its way into manufacturing new containers,
+            various items are crafted from recycled plastics, and recycled metals contribute to the creation of new metal products.
+            This recycling loop helps conserve resources, reduce waste, and promote sustainability across different industries.
+          </h3>
+          <br><br>
+    
+          <h1>
+            Non-Recyclable Trash
+          </h1>
+          <h3 style="text-align: justify;">
+            Non-recyclable trash is sent to landfills for controlled disposal, where it is compacted to minimize environmental impact.
+            Alternatively, waste-to-energy facilities incinerate non-recyclable waste to generate energy.
+            This responsible management helps minimize the environmental footprint of non-recyclable materials.
+          </h3>
+          <br><br>
+    
+          <h1>
+            Electronic Waste (E-Waste)
+          </h1>
+          <h3 style="text-align: justify;">
+            E-waste is disassembled, and valuable materials are extracted for reuse, helping recover precious metals and reduce the need for new raw materials.
+            The recycled materials can be used to manufacture new electronic products, fostering a more sustainable approach in the electronics industry.
+          </h3>
+          <br><br>
+    
+          <h1>
+            Harzadous Waste
+          </h1>
+          <h3 style="text-align: justify;">
+            Hazardous waste is treated in specialized facilities through methods like chemical treatment or incineration for safe disposal.
+            This ensures responsible management, preventing environmental contamination and safeguarding public health.
+          </h3>
+          <br><br>
+    
+          
+          <br><br>
+    
+          
+          
+    
+        </div>
+        <img id="fixedImageA" src="{{ url_for('static', filename='Images/question.png') }}" alt="Earth Image">
+        <img id="fixedImageB" src="{{ url_for('static', filename='Images/banana.png') }}" alt="Compostable Waste Image">
+        <img id="fixedImageC" src="{{ url_for('static', filename='Images/recycle.png') }}" alt="Recyclable Image">
+        <img id="fixedImageD" src="{{ url_for('static', filename='Images/trashbin.png') }}" alt="Trash Image">
+        <img id="fixedImageE" src="{{ url_for('static', filename='Images/e-waste.png') }}" alt="E-Waste Image">
+        <img id="fixedImageF" src="{{ url_for('static', filename='Images/toxic.png') }}" alt="Hazardous Image">
+      </section>
+    
+      
+    
+      <section id="footer">
+        <div class="container">
+          <ul class="copyright">
+            <li>With a global network of customers, partners, employees, and thought leaders, SAP helps the world run better and improves people's lives. SAP helps companies and organisations of all sizes and industries run their businesses profitably, adapt continuously, and grow sustainably.</a></li>
+          </ul>
+        </div>
+      </section>
+    </body>
+    </html>
+           
